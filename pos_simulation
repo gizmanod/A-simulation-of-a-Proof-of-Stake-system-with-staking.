@@ -1,0 +1,12 @@
+### Files
+- **`pos_simulation.py`**
+  ```python
+  def simulate_pos(stakers):
+      total_stake = sum(stakers.values())
+      for staker, stake in stakers.items():
+          chance = stake / total_stake
+          print(f"{staker} has {chance * 100:.2f}% chance to be selected")
+
+  if __name__ == "__main__":
+      simulate_pos({"Alice": 100, "Bob": 50, "Charlie": 150})
+  ```
